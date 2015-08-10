@@ -1,0 +1,10 @@
+
+_integration/css/main.css
+_integration/librairies/*
+_integration/node_modules/*
+_integration/npm-debug.log
+
+web/css/fonts/*
+web/css/styles.css
+web/img/*
+web/js/*
