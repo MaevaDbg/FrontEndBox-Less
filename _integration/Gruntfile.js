@@ -21,10 +21,18 @@ module.exports = function(grunt) {
     //Liste des fichiers js à concaténer
     var jsSrc = [
             'librairies/jquery/dist/jquery.min.js',
+            'librairies/jquery/dist/jquery.min.js',
+            //'librairies/bootstrap/js/alert.js',
             'librairies/bootstrap/js/dropdown.js',
-            'librairies/bootstrap/js/button.js',
+            //'librairies/bootstrap/js/button.js',
             'librairies/bootstrap/js/collapse.js',
-            'librairies/bootstrap/js/carousel.js',
+            //'librairies/bootstrap/js/carousel.js',
+            //'librairies/bootstrap/js/modal.js',
+            //'librairies/bootstrap/js/tooltip.js',
+            //'librairies/bootstrap/js/popover.js',
+            //'librairies/bootstrap/js/scrollspy.js',
+            //'librairies/bootstrap/js/tab.js',
+            //'librairies/bootstrap/js/transition.js',
             'scripts/scripts.js'
         ],
         jsDist = '../web/js/scripts.js';
@@ -53,7 +61,7 @@ module.exports = function(grunt) {
             },
             build: {
                 files: {
-                    'css/main.css': 'less/*.less'
+                    'css/main.css': 'less/main.less'
                 }
             }
         },
@@ -120,6 +128,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['less:build', 'concat:js', 'concat:css', 'watch']);
     // La commande grunt prod compile les fichiers LESS, minifie les fichiers javascript et les concatene,
     // concatene les fichiers CSS et minifie le tout
-    grunt.registerTask('prod', ['less:build', 'uglify:build', 'concat:css', 'cssmin:minify']);
+    grunt.registerTask('prod', ['less:build', 'uglify:build', 'concat:css', 'cssmin:build']);
 
 };
